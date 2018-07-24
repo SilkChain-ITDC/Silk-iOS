@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddPhoneBookFriend">
+            <connections>
+                <outlet property="bottomLineHeightConstraint" destination="vwN-R0-qld" id="yhc-9Q-NvG"/>
+                <outlet property="bottomView" destination="R8y-nx-ADR" id="ktz-Wa-Dhm"/>
+                <outlet property="phoneBookTable" destination="Q5u-qH-iti" id="bms-3L-z9L"/>
+                <outlet property="searchBar" destination="cRC-Md-f0r" id="chQ-e0-jJF"/>
+                <outlet property="submitButton" destination="xTR-NC-Wg1" id="WGf-To-Ylm"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Q5u-qH-iti">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="607"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                    <searchBar key="tableHeaderView" contentMode="redraw" id="cRC-Md-f0r">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <textInputTraits key="textInputTraits"/>
+                        <connections>
+                            <outlet property="delegate" destination="-1" id="RwR-qu-dL3"/>
+                        </connections>
+                    </searchBar>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="MdT-bG-a0c"/>
+                        <outlet property="delegate" destination="-1" id="Dv6-X4-D1B"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R8y-nx-ADR">
+                    <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTR-NC-Wg1">
+                            <rect key="frame" x="20" y="12" width="335" height="36"/>
+                            <color key="backgroundColor" red="0.15686274510000001" green="0.50980392159999999" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="Button">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="submitEvent:" destination="-1" eventType="touchUpInside" id="dXM-CQ-M2E"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6T9-5i-yeq">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                            <color key="backgroundColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="vwN-R0-qld"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="xTR-NC-Wg1" firstAttribute="leading" secondItem="R8y-nx-ADR" secondAttribute="leading" constant="20" id="06X-ju-YTo"/>
+                        <constraint firstAttribute="bottom" secondItem="xTR-NC-Wg1" secondAttribute="bottom" constant="12" id="3Dk-dm-5aD"/>
+                        <constraint firstAttribute="height" constant="60" id="3eL-IZ-NCC"/>
+                        <constraint firstItem="6T9-5i-yeq" firstAttribute="top" secondItem="R8y-nx-ADR" secondAttribute="top" id="8cY-xy-vOZ"/>
+                        <constraint firstItem="6T9-5i-yeq" firstAttribute="leading" secondItem="R8y-nx-ADR" secondAttribute="leading" id="V6I-Gy-ooi"/>
+                        <constraint firstAttribute="trailing" secondItem="6T9-5i-yeq" secondAttribute="trailing" id="a7W-Vd-TEL"/>
+                        <constraint firstAttribute="trailing" secondItem="xTR-NC-Wg1" secondAttribute="trailing" constant="20" id="c2T-BA-fAl"/>
+                        <constraint firstItem="xTR-NC-Wg1" firstAttribute="top" secondItem="R8y-nx-ADR" secondAttribute="top" constant="12" id="uvh-bE-XvO"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="R8y-nx-ADR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6sh-uE-Xu2"/>
+                <constraint firstItem="R8y-nx-ADR" firstAttribute="top" secondItem="Q5u-qH-iti" secondAttribute="bottom" id="JI6-4j-O93"/>
+                <constraint firstItem="Q5u-qH-iti" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="QKa-BA-AaY"/>
+                <constraint firstAttribute="trailing" secondItem="R8y-nx-ADR" secondAttribute="trailing" id="Xhe-wU-Gi3"/>
+                <constraint firstAttribute="trailing" secondItem="Q5u-qH-iti" secondAttribute="trailing" id="gCd-lU-btd"/>
+                <constraint firstAttribute="bottom" secondItem="R8y-nx-ADR" secondAttribute="bottom" id="qai-es-Cke"/>
+                <constraint firstItem="Q5u-qH-iti" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ulC-3t-QZx"/>
+            </constraints>
+            <point key="canvasLocation" x="519" y="332"/>
+        </view>
+    </objects>
+</document>
