@@ -8,7 +8,11 @@
 
 #import "Base.h"
 
+#import "OSilkInfoModel.h"
+
 @interface OSilkReferralViewController : Base
+
+@property (strong, nonatomic) OSilkInfoModel *silkInfo;
 
 
 @property (weak, nonatomic) IBOutlet UIScrollView *bGView;
